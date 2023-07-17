@@ -1,0 +1,46 @@
+{
+  "name": "@emnudge/rollup-plugin-wat",
+  "version": "0.1.0",
+  "description": "Import typed WAT with Rollup",
+  "type": "module",
+  "exports": {
+    "import": "./main.js",
+    "require": "./cjs.js"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "author": "EmNudge <emnudge+gh@gmail.com>",
+  "files": [
+    "main.js",
+    "README.md"
+  ],
+  "keywords": [
+    "rollup",
+    "plugin",
+    "webassembly",
+    "wasm",
+    "wast",
+    "wat",
+    "typescript"
+  ],
+  "peerDependencies": {
+    "rollup": "^1.20.0||^2.0.0||^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "rollup": {
+      "optional": true
+    }
+  },
+  "contributors": [
+    "EmNudge <emnudge+gh@gmail.com>"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@webassemblyjs/wast-parser": "^1.11.6",
+    "wabt": "^1.0.32"
+  }
+}
