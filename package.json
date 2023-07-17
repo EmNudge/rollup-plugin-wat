@@ -1,8 +1,14 @@
 {
   "name": "@emnudge/rollup-plugin-wat",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Import typed WAT with Rollup",
   "type": "module",
+  "homepage": "https://github.com/EmNudge/rollup-plugin-wat",
+  "bugs": "https://github.com/EmNudge/rollup-plugin-wat/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EmNudge/rollup-plugin-wat.git"
+  },
   "exports": {
     "types": "./types.d.ts",
     "import": "./main.js",
