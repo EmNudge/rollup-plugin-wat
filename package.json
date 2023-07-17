@@ -4,6 +4,7 @@
   "description": "Import typed WAT with Rollup",
   "type": "module",
   "exports": {
+    "types": "./types.d.ts",
     "import": "./main.js",
     "require": "./cjs.js"
   },

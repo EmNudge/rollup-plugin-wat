@@ -4,11 +4,14 @@ A Rollup plugin for directly importing "[WebAssembly Text Format](https://develo
 
 Imports are dynamically typed via creation of a local `.d.ts` file next to the `.wat` source.
 
+**demo**
+https://github.com/EmNudge/rollup-plugin-wat/assets/24513691/324ab107-8969-4e3d-8553-aeacdd028e9a
+
 ## Install
 
 using npm
 ```sh
-npm install --save-dev rollup-plugin-wat 
+npm install --save-dev @emnudge/rollup-plugin-wat 
 ```
 
 ## Usage
@@ -16,14 +19,13 @@ npm install --save-dev rollup-plugin-wat
 Add the plugin to your `plugins` array in your `rollup.config.js` file.
 
 ```js
-import { wat } from 'rollup-plugin-wat';
+import { wat } from '@emnudge/rollup-plugin-wat';
 
 export default {
   // ...some other config
   plugins: [wat()]
 }
 ```
-
 
 ## Credits
 
