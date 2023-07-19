@@ -10,16 +10,17 @@
     "url": "https://github.com/EmNudge/rollup-plugin-wat.git"
   },
   "exports": {
-    "types": "./types.d.ts",
-    "import": "./main.js",
-    "require": "./cjs.js"
+    "types": "./dist/types.d.ts",
+    "import": "./dist/esm.js",
+    "require": "./dist/cjs.js"
   },
   "scripts": {
+    "test": "vitest",
     "build": "rollup -c"
   },
   "author": "EmNudge <emnudge+gh@gmail.com>",
   "files": [
-    "main.js",
+    "dist",
     "README.md"
   ],
   "keywords": [
@@ -48,6 +49,11 @@
   "license": "MIT",
   "dependencies": {
     "@webassemblyjs/wast-parser": "^1.11.6",
-    "wabt": "^1.0.32"
+    "wabt": "^1.0.32",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "tslib": "^2.6.0"
+  },
+  "devDependencies": {
+    "vitest": "^0.33.0"
   }
 }

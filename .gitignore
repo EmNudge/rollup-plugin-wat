@@ -1,2 +1,3 @@
 node_modules
-cjs.js
+dist/cjs.js
+dist/esm.js

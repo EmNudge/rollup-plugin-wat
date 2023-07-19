@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "moduleResolution": "NodeNext",
+    "target": "ES2018"
+  }
+}
