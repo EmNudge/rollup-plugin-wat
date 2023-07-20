@@ -44,6 +44,7 @@ declare export function instantiate(imports?: Imports): Promise<WebAssembly.Inst
 
   it("types imports and exports", () => {
     const types = getDeclarationFileContents(`(module
+      (import "js" "memory" (memory 1))
       (import "console" "log" (func $log (param i32)))
 
       (func $main)
@@ -51,9 +52,20 @@ declare export function instantiate(imports?: Imports): Promise<WebAssembly.Inst
     )`);
     assert.include(
       types,
-      `type Imports = { console: { log: (param_0: i32) => void } }`
+      `type Imports = { js: { memory: WebAssembly.Memory }, console: { log: (param_0:  i32) => void } }`
     );
     assert.include(types, `type Exports = { exports: { main: () => void } }`);
+  });
+
+  it("collapses module names for imports", () => {
+    const types = getDeclarationFileContents(`(module
+      (import "js" "table" (table 2 funcref))
+      (import "js" "memory" (memory 1))
+    )`);
+    assert.include(
+      types,
+      `type Imports = { js: { table: WebAssembly.Table, memory: WebAssembly.Memory } }`
+    );
   });
 
   it("only aliases the number types used", () => {

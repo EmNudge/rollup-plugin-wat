@@ -1,6 +1,6 @@
 {
   "name": "@emnudge/rollup-plugin-wat",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Import typed WAT with Rollup",
   "type": "module",
   "homepage": "https://github.com/EmNudge/rollup-plugin-wat",

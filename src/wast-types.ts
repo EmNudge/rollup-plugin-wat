@@ -7,7 +7,10 @@ export interface ModuleImport {
   type: 'ModuleImport',
   module: string,
   name: string,
-  descr: { signature: Signature }
+  descr: 
+    | { type: 'FuncImportDescr', signature: Signature } 
+    | { type: 'Memory', limits: { min: number, max?: number }}
+    | { type: 'Table', elementType: string, limits: { min: number } }
 }
 
 export interface ModuleExport {
